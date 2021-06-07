@@ -4,7 +4,7 @@ import ExploreContainer from '../components/ExploreContainer';
 import { usePhotoGallery } from '../hooks/usePhotoGallery'
 import './Tab2.css';
 
-
+// React.FC (functional component)
 const Tab2: React.FC = () => {
   const { photos, takePhoto } = usePhotoGallery()
   return (

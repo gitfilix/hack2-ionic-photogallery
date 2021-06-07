@@ -11,14 +11,16 @@ export interface UserPhoto {
   filepath: string;
   webviewPath?: string;
 }
-export function usePhotoGallery() {
 
+export function usePhotoGallery() {
+  // useSteate 
   const [photos, setPhotos] = useState<UserPhoto[]>([]);
 
   useEffect(() => {
+    // async call Storage.get all photos
     const loadSaved = async () => {
       const { value } = await Storage.get({ key: PHOTO_STORAGE });
-
+      // parse if there are pictures or return empty array
       const photosInStorage = (value ? JSON.parse(value) : []) as UserPhoto[];
       // If running on the web...
       if (!isPlatform('hybrid')) {
@@ -37,13 +39,17 @@ export function usePhotoGallery() {
   }, []);
 
   const takePhoto = async () => {
+    // take a new photo: generic Camera.getPhoto from Capacitor method
     const cameraPhoto = await Camera.getPhoto({
       resultType: CameraResultType.Uri,
       source: CameraSource.Camera,
-      quality: 100
+      quality: 95
     });
+    // unique file names 
     const fileName = new Date().getTime() + '.jpeg';
+    // Array with stored images 
     const savedFileImage = await savePicture(cameraPhoto, fileName);
+    // newly taken Photos should be updated and stored 
     const newPhotos = [savedFileImage, ...photos];
     setPhotos(newPhotos);
     Storage.set({ key: PHOTO_STORAGE, value: JSON.stringify(newPhotos) });
@@ -51,7 +57,7 @@ export function usePhotoGallery() {
 
   const savePicture = async (photo: Photo, fileName: string): Promise<UserPhoto> => {
     let base64Data: string;
-    // "hybrid" will detect Cordova or Capacitor;
+    // platform hybrid will detect Cordova or Capacitor;
     if (isPlatform('hybrid')) {
       const file = await Filesystem.readFile({
         path: photo.path!
@@ -67,8 +73,9 @@ export function usePhotoGallery() {
     });
 
     if (isPlatform('hybrid')) {
-      // Display the new image by rewriting the 'file://' path to HTTP
+      // Display the new image by rewriting the 'file://' path to 'HTTP'
       // Details: https://ionicframework.com/docs/building/webview#file-protocol
+      // Capacitonr convertFile convert file URIs
       return {
         filepath: savedFile.uri,
         webviewPath: Capacitor.convertFileSrc(savedFile.uri),
@@ -84,6 +91,7 @@ export function usePhotoGallery() {
     }
   };
 
+  // photo taken by the user should not be stored 'use case: ugly'
   const deletePhoto = async (photo: UserPhoto) => {
     // Remove this photo from the Photos reference data array
     const newPhotos = photos.filter(p => p.filepath !== photo.filepath);
@@ -105,11 +113,6 @@ export function usePhotoGallery() {
     photos,
     takePhoto
   };
-}
-
-export interface UserPhoto {
-  filepath: string;
-  webviewPath?: string;
 }
 
 export async function base64FromPath(path: string): Promise<string> {
