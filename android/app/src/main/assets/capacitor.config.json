@@ -1,5 +1,5 @@
 {
-	"appId": "io.ionic.starter",
+	"appId": "io.ionic.felixruben.starter",
 	"appName": "photo-gallery",
 	"webDir": "build",
 	"bundledWebRuntime": false

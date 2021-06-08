@@ -1,0 +1,76 @@
+PODS:
+  - Capacitor (3.0.0):
+    - CapacitorCordova
+  - CapacitorApp (1.0.0):
+    - Capacitor
+  - CapacitorCamera (1.0.0):
+    - Capacitor
+  - CapacitorCordova (3.0.0)
+  - CapacitorFilesystem (1.0.0):
+    - Capacitor
+  - CapacitorGeolocation (1.0.0):
+    - Capacitor
+  - CapacitorHaptics (1.0.0):
+    - Capacitor
+  - CapacitorKeyboard (1.0.0):
+    - Capacitor
+  - CapacitorStatusBar (1.0.0):
+    - Capacitor
+  - CapacitorStorage (1.0.0):
+    - Capacitor
+  - CordovaPlugins (3.0.0):
+    - CapacitorCordova
+
+DEPENDENCIES:
+  - "Capacitor (from `../../node_modules/@capacitor/ios`)"
+  - "CapacitorApp (from `../../node_modules/@capacitor/app`)"
+  - "CapacitorCamera (from `../../node_modules/@capacitor/camera`)"
+  - "CapacitorCordova (from `../../node_modules/@capacitor/ios`)"
+  - "CapacitorFilesystem (from `../../node_modules/@capacitor/filesystem`)"
+  - "CapacitorGeolocation (from `../../node_modules/@capacitor/geolocation`)"
+  - "CapacitorHaptics (from `../../node_modules/@capacitor/haptics`)"
+  - "CapacitorKeyboard (from `../../node_modules/@capacitor/keyboard`)"
+  - "CapacitorStatusBar (from `../../node_modules/@capacitor/status-bar`)"
+  - "CapacitorStorage (from `../../node_modules/@capacitor/storage`)"
+  - CordovaPlugins (from `../capacitor-cordova-ios-plugins`)
+
+EXTERNAL SOURCES:
+  Capacitor:
+    :path: "../../node_modules/@capacitor/ios"
+  CapacitorApp:
+    :path: "../../node_modules/@capacitor/app"
+  CapacitorCamera:
+    :path: "../../node_modules/@capacitor/camera"
+  CapacitorCordova:
+    :path: "../../node_modules/@capacitor/ios"
+  CapacitorFilesystem:
+    :path: "../../node_modules/@capacitor/filesystem"
+  CapacitorGeolocation:
+    :path: "../../node_modules/@capacitor/geolocation"
+  CapacitorHaptics:
+    :path: "../../node_modules/@capacitor/haptics"
+  CapacitorKeyboard:
+    :path: "../../node_modules/@capacitor/keyboard"
+  CapacitorStatusBar:
+    :path: "../../node_modules/@capacitor/status-bar"
+  CapacitorStorage:
+    :path: "../../node_modules/@capacitor/storage"
+  CordovaPlugins:
+    :path: "../capacitor-cordova-ios-plugins"
+
+SPEC CHECKSUMS:
+  Capacitor: 06cd8cd01340f5b162e9528bf5569d87a6f29009
+  CapacitorApp: 65f98e8604f5c5523537aa3bc38ffe49461c6695
+  CapacitorCamera: b9d1bfddddca800b320fa347cf76edd35f3f4120
+  CapacitorCordova: 183c8d1af3851da6d7a371f273462c8e64e15464
+  CapacitorFilesystem: 5d511231dda31accdcaa01098fa01e2df550c227
+  CapacitorGeolocation: fa2d9e0081c0b6f3391915880229acb261765b09
+  CapacitorHaptics: bac278586ed00037d18228b11591125928f6d911
+  CapacitorKeyboard: d43d9fbabf6c985c9a7c0f7e0b4ba59f6b28dd3f
+  CapacitorStatusBar: 532fda5c353659ff240f24cb925e58329fab5253
+  CapacitorStorage: 59ed3a27f7d8bcb343d4cb331d9ef39b11176246
+  CordovaPlugins: c9e6fad5a4e9808209491dc3ac2d19e31d2e319e
+
+PODFILE CHECKSUM: 95bf70239722a8e94f5d03054d8c35f13220067d
+
+COCOAPODS: 1.10.1

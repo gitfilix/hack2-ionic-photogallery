@@ -1,0 +1,2 @@
+(this["webpackJsonpphoto-gallery"]=this["webpackJsonpphoto-gallery"]||[]).push([[58],{171:function(t,n,e){"use strict";e.r(n),e.d(n,"startStatusTap",(function(){return r}));var o=e(19),i=e(15),r=function(){var t=window;t.addEventListener("statusTap",(function(){Object(o.h)((function(){var n=t.innerWidth,e=t.innerHeight,r=document.elementFromPoint(n/2,e/2);if(r){var c=r.closest("ion-content");c&&new Promise((function(t){return Object(i.c)(c,t)})).then((function(){Object(o.f)((function(){return c.scrollToTop(300)}))}))}}))}))}}}]);
+//# sourceMappingURL=58.4c3239e5.chunk.js.map
