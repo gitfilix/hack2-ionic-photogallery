@@ -27,12 +27,12 @@ const GeolocationButton: React.FC = () => {
     }
 
     const drawMap = (latitude: number, longitude: number) => {
-      const src = ''
+      const src = `https://www.google.com/maps/embed/v1/view?key=AIzaSyCAI-kfzVhSmr1aUJ4N-gLyjozI6OR8uZA&center=${latitude},${longitude}&zoom=18&maptype=satellite`
       return (
         <iframe
-          width="450"
+          width="400"
           height="250"
-          src="https://www.google.com/maps/embed/v1/view?key=AIzaSyCAI-kfzVhSmr1aUJ4N-gLyjozI6OR8uZA&center=47.3771287,8.5255792&zoom=18&maptype=satellite">
+          src={src}>
         </iframe>      
       )
     }
